@@ -63,3 +63,4 @@ ping -c 3 cloudflare.com
 
 bash "$DIR/screenSaverInstaller.sh"
 bash "$DIR/lnScripts.sh"
+bash "$DIR/installOctoprint.sh"
