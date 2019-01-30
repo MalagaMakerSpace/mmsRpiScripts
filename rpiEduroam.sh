@@ -21,11 +21,10 @@ clear
 
 # BEGIN
 cd ~
-sudo
 
 # Copy our custom scripts
 cp -r "$DIR/malagaMakerScripts" "~/malagaMakerScripts"
-cp "$DIR/OnBoot.desktop" "~/.config/autostart/"
+# cp "$DIR/onBoot.desktop" "~/.config/autostart/"
 
 # Download the eduroam certificate
 # wget -O "~/DigicertCA.crt" "$CERTURL"
@@ -44,7 +43,7 @@ sudo ln -sf /lib/systemd/resolv.conf /etc/resolv.conf
 sudo apt install feh xprintidle xdotool openssh-server
 
 # Replace the email and password fields
-sudo sed -e "s/\${user}/$user/" -e "s/\${password}/$password/" "$DIR/eduroamTemplate.txt" > "$NMPROFILEDIR/eduroam"
+sudo sed -e "s/\${user}/$user/" -e "s/\${password}/$password/" "$DIR/eduroamTemplate.txt" > "$NMPROFILEDIR/eduroam" # Not enough privileges and sed not working
 
 # Protect the read of this file
 sudo chmod 600 "$NMPROFILEDIR/eduroam"

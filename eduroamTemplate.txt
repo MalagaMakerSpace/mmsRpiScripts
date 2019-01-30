@@ -16,7 +16,7 @@ key-mgmt=wpa-eap
 
 [802-1x]
 anonymous-identity=anonymous@uma.es
-ca-cert=/home/rgon/DigiCertCA.crt
+ca-cert=/home/pi/DigiCertCA.crt
 eap=ttls;
 identity=${user}
 password=${password}
